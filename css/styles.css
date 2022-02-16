@@ -386,15 +386,15 @@ section .title::after{
 
 /*Contacts section styling*/
  .contacts{
-  background: #6096FD;
+  background: #86abf9;
   color: #fff;
 }
 .contacts .title::before{
   background: #fff;
-} */
+}
 .contacts .title::after{
-  background: #6096FD ;
-  content: "Get in touch";
+  background: #86abf9 ;
+  content: "Hit me up";
 }
 .contacts .contacts-content .column{
   width: calc(50% - 30px);
@@ -439,15 +439,54 @@ section .title::after{
 .contacts .right form .fields .field{
   height: 45px;
   width: 100%;
+  margin-bottom: 15px;
+}
+.contacts .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+.contacts .right form .name{
+  margin-right: 10px;
+}
+.contacts .right form .email{
+  margin-left: 10px;
 }
 
+.contacts .right form .textarea textarea,
 .contacts .right form .field input{
   height: 100%;
   width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: "Poppins",sans-serif;
 }
-
-
-
+.contacts .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contacts .right form .button{
+  height: 47px;
+  width: 170px;
+}
+.contacts .right form .button button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid #6893ee ;
+  background: #4169E1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contacts .right form .button button:hover{
+  color: #fff;
+  background: none;
+}
 
 .wave {
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -557,6 +596,10 @@ section .title::after{
   .skills .skills-content .card{
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+  .contacts .contacts-content .column{
+    width: 100%;
+    margin-bottom: 35px;
   }
 }
 
