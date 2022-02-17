@@ -345,7 +345,7 @@ section .title::after{
   content: "";
   position: absolute;
   height: 100%;
-  width: 60%;
+
   left: 0;
   top: 0;
   background: blue;
@@ -355,6 +355,36 @@ section .title::after{
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
+.skills-content .card .html::before{
+  width: 50%;
+}
+.skills-content .card .css::before{
+  width: 50%;
+}
+.skills-content .card .js::before{
+  width: 40%;
+}
+.skills-content .card .python::before{
+  width: 80%;
+}
+.skills-content .card .R::before{
+  width: 50%;
+}
+.skills-content .card .sas::before{
+  width: 40%;
+}
+.skills-content .card .sql::before{
+  width: 40%;
+}
+.skills-content .card .c::before{
+  width: 70%;
+}
+.skills-content .card .java::before{
+  width: 50%;
+}
+
+
 
 
 /*Projects section styling*/
