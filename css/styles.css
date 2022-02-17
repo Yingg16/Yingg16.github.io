@@ -228,7 +228,7 @@ section .title::after{
   transform: translateX(-50%) ;
 }
 .about .title::after{
-  content: "who i am";
+  content: "Who I Am";
 }
 .about .about-content,
 .skills .skills-content,
@@ -291,7 +291,7 @@ section .title::after{
 }
 .skills .title::after{
   background: #86abf9 ;
-  content: "What I learn";
+  content: "What I Learn";
 }
 .skills .skills-content .card{
   width: calc(33% - 20px);
@@ -366,7 +366,7 @@ section .title::after{
   background: #111;
 }
 .projects .title::after{
-  content: "my recent work";
+  content: "My Recent Work";
 }
 
 .projects .carousel .card{
@@ -461,7 +461,7 @@ section .title::after{
 }
 .contacts .title::after{
   background: #86abf9 ;
-  content: "Hit me up";
+  content: "Hit Me Up";
 }
 .contacts .contacts-content .column{
   width: calc(50% - 30px);
