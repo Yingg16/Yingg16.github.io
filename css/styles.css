@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .max-width{
   max-width: 1300px;
   padding: 0 80px;
@@ -67,7 +71,33 @@
   cursor: pointer;
   display: none;
 }
-
+.scrollup{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: rgb(50, 20, 220);
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scrollup{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scrollup:hover{
+  filter: brightness(90%);
+}
 /*Home Section Styling*/
 .home{
   display: flex;
@@ -162,7 +192,7 @@ section .title::after{
   transform: translateX(-50%) ;
 }
 /*about section styling*/
-.about, .services, .skills, .projects, .contacts{
+.about, .skills, .projects, .contacts{
   font-family: 'Poppins',sans-serif;
 }
 section .title{
@@ -200,7 +230,6 @@ section .title::after{
   content: "who i am";
 }
 .about .about-content,
-.services .services-content,
 .skills .skills-content,
 .projects .projects-content,
 .contacts .contacts-content{
@@ -250,63 +279,17 @@ section .title::after{
   background: none;
 }
 
-/*Services Section Styling*/
-.services{
-  background: #6DAFFE;
-  color: #fff;
-}
-.services .title::before{
-  background: #fff;
-}
-.services .title::after{
-  background: #6DAFFE ;
-  content: "What I Offer";
-}
-.services .services-content .card{
-  width: calc(33% - 20px);
-  background: rgb(63, 59, 59);
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.services .services-content .card:hover{
-  background: #6DAFFE;
-}
-
-.services .services-content .card .box{
-  transition: all 0.3s ease;
-}
-
-.services .services-content .card:hover .box{
-  transform: scale(1.05);
-}
-.services .services-content .card i{
-  font-size: 40px ;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-.services .services-content .card:hover i{
-  color: #fff;
-}
-.services .services-content .card .text{
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
 
 /*Skills Section*/
 .skills{
-  background: #6096FD;
+  background: #86abf9;
   color: #fff;
 }
 .skills .title::before{
   background: #fff;
 }
 .skills .title::after{
-  background: #6096FD ;
+  background: #86abf9 ;
   content: "What I learn";
 }
 .skills .skills-content .card{
@@ -372,6 +355,7 @@ section .title::after{
   margin: 10px 0 7px 0;
 }
 
+
 /*Projects section styling*/
 .projects{
   background: #fff;
@@ -383,6 +367,88 @@ section .title::after{
 .projects .title::after{
   content: "my recent work";
 }
+
+.projects .carousel .card{
+  width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 6px;
+  padding: 30px 30px;
+  text-align: center;
+  border: 2px solid #6DAFFE;
+  transition: all 0.3s ease;
+}
+
+.projects .carousel .card .box{
+    width: calc(33% - 20px);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.projects .carousel .card:hover .box{
+  transform: scale(1.05);
+}
+.projects .carousel .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .card img{
+  height: 200px;
+  width: 450px;
+  object-fit: cover;
+  border-radius: 2%;
+  display: block;  
+  margin-left: auto;  
+  margin-right: auto;  
+  border: 3px solid #fff;
+  transition: all 0.3s ease;
+}
+.projects .carousel .card:hover img{
+  border-color: #fff;
+}
+.projects .carousel .card a{
+  display: inline-block;
+  background: #6DAFFE;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid #6DAFFE;
+  transition: all 0.3s ease;
+}
+.projects .carousel .card a:hover{
+  color: #6DAFFE;
+  background: none;
+}  
+
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid rgb(2, 59, 246)!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #4169E1!important;
+}
+
 
 /*Contacts section styling*/
  .contacts{
@@ -487,6 +553,21 @@ section .title::after{
   color: #fff;
   background: none;
 }
+
+/* footer section styling */
+footer{
+  background: #fff;
+  padding: 15px 23px;
+  color: #111;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+footer span a{
+  color: #86abf9;
+  text-decoration: none;
+}
+
 
 .wave {
   animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
