@@ -411,7 +411,7 @@ section .title::after{
 }
 
 .projects .carousel .card .box{
-    width: calc(33% - 20px);
+  width: calc(33% - 20px);
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -804,7 +804,21 @@ footer{
     width: 350px;
   }
 }
-
+@media (max-width: 548px){
+  .projects .carousel .card{
+    width:440px;
+  }
+  .projects .carousel .card p{
+    font-size: 15px;
+  }
+  .projects .carousel .card img{
+    height: 200px;
+    width: 400px;
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;
+  }
+}
 @media (max-width: 500px){
   .max-width{
     padding: 0 23px;
