@@ -5,7 +5,7 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky");
         } 
-        if(this.scroll >500){
+        if(this.scrollY > 20){
             $('.scrollup').addClass("show");
         }else{
             $('.scrollup').removeClass("show");

@@ -88,14 +88,15 @@ html{
   border-bottom-width: 2px;
   cursor: pointer;
   opacity: 0;
-  pointer-events: none;
   transition: all 0.3s ease;
-}
-.scrollup{
-  bottom: 30px;
+  bottom: -60px;
   opacity: 1;
   pointer-events: auto;
 }
+.scrollup.show {
+  bottom: 30px;
+}
+
 .scrollup:hover{
   filter: brightness(90%);
 }
@@ -131,7 +132,7 @@ html{
 }
 
 .home .portfolio-img img{
-  width: 80%;
+  width: 90%;
 }
 
 .home .home-content .text-1{
@@ -173,39 +174,17 @@ html{
   padding: 12px 20px;
   margin-top: 15px;
   border-radius: 10px;
-  border: 2px solid #6DAFFE;
   transition: all 0.3s ease;
 } 
 
 .home .home-content a:hover{
   color: black;
   background: none;
+  border: 3px solid #1452fa;
 }
 /* all similar content styling code */
 section{
   padding: 80px 0;
-}
-
-section .title::before{
-  content:"";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  background: #111 ;
-  transform: translateX(-50%) ;
-}
-
-section .title::after{
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
-  font-size: 20px;
-  color: #6DAFFE;
-  padding: 5px;
-  background: #fff;
-  transform: translateX(-50%) ;
 }
 /*about section styling*/
 .about, .skills, .projects, .contacts{
@@ -216,35 +195,47 @@ section .title{
   text-align: center;
   font-size: 40px;
   font-weight: 500;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
   font-family: 'Ubuntu',sans-serif;
 }
 
-section .title::before{
-  content:"";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 180px;
-  height: 3px;
-  background: #111 ;
-  transform: translateX(-50%) ;
-}
-
-section .title::after{
-  position: absolute;
-  bottom: -12px;
-  left: 50%;
+section .subtitle {
+  text-align: center;
   font-size: 20px;
   color: #0663d4;
-  padding: 5px;
-  background: #fff;
-  transform: translateX(-50%) ;
+  font-weight: 500;
+  font-family: 'Ubuntu',sans-serif;
+  position: relative;
+  margin-bottom: 20px;
 }
-.about .title::after{
-  content: "Who I Am";
+
+section .subtitle span {
+  position: relative;
 }
+
+section .subtitle span::before {
+  left: -22px;
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+section .subtitle span::after {
+  right: -22px;
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
 .about .about-content,
 .skills .skills-content,
 .projects .projects-content,
@@ -301,13 +292,7 @@ section .title::after{
   background: #86abf9;
   color: #fff;
 }
-.skills .title::before{
-  background: #fff;
-}
-.skills .title::after{
-  background: #86abf9 ;
-  content: "What I Learn";
-}
+
 .skills .skills-content .card{
   width: calc(33% - 20px);
   height: 300px;
@@ -407,12 +392,6 @@ section .title::after{
   background: #fff;
   color: #111;
 }
-.projects .title::before{
-  background: #111;
-}
-.projects .title::after{
-  content: "My Recent Work";
-}
 
 .projects .carousel .card{
   width: 500px;
@@ -500,13 +479,6 @@ section .title::after{
  .contacts{
   background: #86abf9;
   color: #fff;
-}
-.contacts .title::before{
-  background: #fff;
-}
-.contacts .title::after{
-  background: #86abf9 ;
-  content: "Hit Me Up";
 }
 .contacts .contacts-content .column{
   width: calc(50% - 30px);
@@ -702,10 +674,6 @@ footer{
 }
 
 @media (max-width: 1123px){
-  .home .home-content .text-4{
-    height: 70px;
-    width: 350px;
-  }
   .home .home-content .a{
     font-size: 18px;
     padding: 5px 20px;
@@ -813,13 +781,6 @@ footer{
   }
 }
 
-
-@media (max-width: 628px){
-  .home .home-content .text-3{
-    height: 80px;
-    width: 350px;
-  }
-}
 @media (max-width: 548px){
   .projects .carousel .card{
     width:440px;
@@ -870,6 +831,5 @@ footer{
 @media (max-width: 600px) {
   .home .max-width {
     flex-direction: column-reverse;
-    max-width: 90%;
   }
 }
