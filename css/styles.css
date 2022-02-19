@@ -102,7 +102,7 @@ html{
 /*Home Section Styling*/
 .home{
   display: flex;
-  background: url("homebackground.jpg") no-repeat center;
+  background: url("../img/pastel.jpg") no-repeat center;
   height: 90vh;
   color: black;
   min-height: 500px;
@@ -114,9 +114,25 @@ html{
 .home .max-width{
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .home .max-width .row{
   margin-right: 0;
+}
+
+.home .home-content {
+  flex-basis: 70%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.home .portfolio-img {
+  flex-basis: 30%;
+  text-align: center;
+}
+
+.home .portfolio-img img{
+  width: 80%;
 }
 
 .home .home-content .text-1{
@@ -851,3 +867,9 @@ footer{
 
 }
 
+@media (max-width: 600px) {
+  .home .max-width {
+    flex-direction: column-reverse;
+    max-width: 90%;
+  }
+}
