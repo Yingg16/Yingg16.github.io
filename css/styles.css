@@ -103,9 +103,8 @@ html{
 .home{
   display: flex;
   background: url("../img/pastel.jpg") no-repeat center;
-  height: 90vh;
   color: black;
-  min-height: 500px;
+  min-height: max(500px, 90vh);
   background-size: cover;
   background-attachment: local;
   font-family: 'Ubuntu', sans-serif;
@@ -715,7 +714,7 @@ footer{
 
 @media (max-width: 1104px){
   .about .about-content .left img{
-    height: 350px;
+
     width: 350px;
   }
 }
@@ -813,6 +812,7 @@ footer{
     width: 100%
   }
 }
+
 
 @media (max-width: 628px){
   .home .home-content .text-3{
